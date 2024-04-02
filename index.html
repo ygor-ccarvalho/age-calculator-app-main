@@ -23,48 +23,40 @@
 
 <body>
   <div class="container">
-    <div class="born-date">
-      <small>DAY</small>
-        <input placeholder="DD" class="born" name="day" id="day">
-      
-
-      
-        <small>MONTH</small>
-        <input placeholder="MM" class="born" name="month" id="month">
-      
-
-      
-        <small>YEAR</small>
-        <input placeholder="YYYY" class="born" name="year" id="year">
-      
-
+    <div class="input-flex">
+      <div class="input-container">
+        <span>Day</span>
+        <input type="number" id="day">
+        <small class="error-day"></small>
+      </div>
+      <div class="input-container">
+        <span>Month</span>
+        <input type="number" id="month">
+        <small class="error-month"></small>
+      </div>
+      <div class="input-container">
+        <span>Year</span>
+        <input type="number" id="year">
+        <small class="error-year"></small>
+      </div>
     </div>
-
-    <div class="icon">
-      <hr> <img src="/assets/images/icon-arrow.svg" alt="">
-    </div>
-
-    <div class="age">
-
-      <div class="age-calculated">
-        <p><span>--</span> years</p>
-      </div>
-
-      <div class="age-calculated">
-        <p><span>--</span> month</p>
-      </div>
-
-      <div class="age-calculated">
-        <p><span>--</span> days</p>
-      </div>
+    <button class="submit-btn">
+      <img src="./assets/images/icon-arrow.svg" alt="">
+    </button>
+    <div class="output">
+      <h1><span class="output-year">--</span>years</h1>
+      <h1><span class="output-month">--</span>months</h1>
+      <h1><span class="output-day">--</span>days</h1>
     </div>
   </div>
+
 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
