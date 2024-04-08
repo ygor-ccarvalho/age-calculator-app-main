@@ -12,8 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -23,49 +23,40 @@
 
 <body>
   <div class="container">
-    <div class="born-date">
-      <small>DAY</small>
-        <input placeholder="DD" class="born" name="day" id="day">
-      
-
-      
-        <small>MONTH</small>
-        <input placeholder="MM" class="born" name="month" id="month">
-      
-
-      
-        <small>YEAR</small>
-        <input placeholder="YYYY" class="born" name="year" id="year">
-      
-
+    <div class="input-flex">
+      <div class="input-container">
+        <span>DAY</span>
+        <input type="number" id="day">
+        <small class="error-day"></small>
+      </div>
+      <div class="input-container">
+        <span>MONTH</span>
+        <input type="number" id="month">
+        <small class="error-month"></small>
+      </div>
+      <div class="input-container">
+        <span>YEAR</span>
+        <input type="number" id="year">
+        <small class="error-year"></small>
+      </div>
     </div>
-    
-    <div>
-      <hr>
-       <img  class="icon" src="/assets/images/icon-arrow.svg" alt="icone">
-    </div>
-
-    <div class="age">
-
-      <div class="age-calculated">
-        <p><span>--</span> years</p>
-      </div>
-
-      <div class="age-calculated">
-        <p><span>--</span> month</p>
-      </div>
-
-      <div class="age-calculated">
-        <p><span>--</span> days</p>
-      </div>
+    <button class="submit-btn">
+      <img src="./assets/images/icon-arrow.svg" alt="">
+    </button>
+    <div class="output">
+      <h1><span class="output-year">--</span>years</h1>
+      <h1><span class="output-month">--</span>months</h1>
+      <h1><span class="output-day">--</span>days</h1>
     </div>
   </div>
+
 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Ygor Carvalho</a>.
   </div>
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
