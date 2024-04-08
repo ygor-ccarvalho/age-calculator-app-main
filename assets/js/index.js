@@ -20,9 +20,9 @@ const errorYear = document.querySelector(".error-year");
 
 submitButton.addEventListener("click", () => {
     if (isValid) {
-        console.log("oi")
+        calculatedDate();
     } else {
-        console.log("no")
+        console.log("error")
     }
 })
 
@@ -76,3 +76,24 @@ inputYear.addEventListener("input", () => {
     }
 
 });
+
+function calculatedDate(){
+    if(isValid){
+        let birthday = `${inputMonth.value}/${inputDay.value}/${inputYear.value}`; //transformei as informações separadas em uma só utilizando a variavel.
+        let bithdayObj = new Date(birthday);
+      
+        let ageDiffMill = Date.now() - bithdayObj;
+        let ageDate = new Date(ageDiffMill);
+        let ageYears = ageDate.getUTCFullYear() - 1970;
+        let ageMonth = ageDate.getUTCMonth();
+        let ageDay = ageDate.getUTCDate() -1;
+        outputDay.textContent = ageDay;
+        outputMonth.textContent = ageMonth;
+        outputYear.textContent = ageYears;
+       
+
+
+    }else{
+        alert("error");
+    }
+}
